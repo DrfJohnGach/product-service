@@ -16,15 +16,4 @@ public class ProductServiceApplication {
 		SpringApplication.run(ProductServiceApplication.class, args);
 	}
 
-	@Bean
-	CommandLineRunner runner(ProductRepository repository){
-		return args -> {
-			Product product = new Product(
-					"Iphone 13",
-					"Iphone 13",
-					BigDecimal.valueOf(1200)
-			);
-			repository.insert(product);
-		};
-	}
 }
